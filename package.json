@@ -1,6 +1,8 @@
 {
-  "name": "peerlesslist",
+  "name": "turborepo-nextjs-wxt-shadcn-boilerplate",
+  "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
@@ -13,7 +15,7 @@
     "@repo/prettier-config": "workspace:*",
     "turbo": "^2.4.4"
   },
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@9.15.1",
   "engines": {
     "node": ">=18"
   }
