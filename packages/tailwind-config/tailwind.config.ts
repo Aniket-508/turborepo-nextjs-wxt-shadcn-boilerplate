@@ -67,4 +67,5 @@ const config: Omit<Config, "content"> = {
   },
   plugins: [tailwindAnimate],
 };
+
 export default config;
