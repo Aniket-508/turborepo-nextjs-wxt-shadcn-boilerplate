@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
 import { useState } from "react"
+import { Button } from "ui/components/button"
 
 import reactLogo from "/react.svg"
 import wxtLogo from "/wxt.svg"

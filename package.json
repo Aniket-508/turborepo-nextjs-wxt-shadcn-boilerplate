@@ -11,8 +11,9 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "prettier": "^3.5.3",
     "@repo/prettier-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "prettier": "^3.5.3",
     "turbo": "^2.4.4"
   },
   "packageManager": "pnpm@9.15.1",
