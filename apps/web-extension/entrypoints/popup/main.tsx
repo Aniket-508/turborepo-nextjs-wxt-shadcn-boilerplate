@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client"
 import App from "./App.tsx"
 
 import "ui/globals.css"
+import "../assets/extension-specific.css"
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
