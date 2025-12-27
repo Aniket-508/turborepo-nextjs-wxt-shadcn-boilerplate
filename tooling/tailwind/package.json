@@ -3,8 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    ".": "./tailwind.config.ts",
+    ".": "./base.ts",
     "./postcss.config": "./postcss.config.mjs"
+  },
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",

@@ -1,10 +1,7 @@
 import sharedConfig from "@repo/tailwind-config";
 import type { Config } from "tailwindcss";
 
-const config: Pick<Config, "darkMode" | "content" | "presets"> = {
-  darkMode: ["class"],
-  content: ["./src/components/**/*.tsx"],
+export default {
+  content: [...sharedConfig.content, "./src/**/*.{ts,tsx}"],
   presets: [sharedConfig],
-};
-
-export default config;
+} satisfies Config;

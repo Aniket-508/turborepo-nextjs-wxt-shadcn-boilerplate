@@ -1,9 +1,13 @@
 {
-  "name": "ui",
+  "name": "@repo/ui",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "lint": "eslint . --max-warnings 0"
+    "clean": "rm -rf .turbo node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+    "ui-add": "pnpm dlx shadcn@latest add && prettier src --write --list-different"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -30,8 +34,8 @@
     "tailwind-merge": "^2.6.0"
   },
   "exports": {
-    "./globals.css": "./src/styles/globals.css",
-    "./lib/*": "./src/lib/*.ts",
-    "./components/*": "./src/components/ui/*.tsx"
+    ".": "./src/index.tsx",
+    "./styles.css": "./src/styles.css",
+    "./utils": "./src/utils.ts"
   }
 }

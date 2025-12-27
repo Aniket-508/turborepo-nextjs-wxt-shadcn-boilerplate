@@ -10,10 +10,10 @@ importers:
     devDependencies:
       '@repo/prettier-config':
         specifier: workspace:*
-        version: link:packages/prettier-config
+        version: link:tooling/prettier
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:packages/typescript-config
+        version: link:tooling/typescript
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
@@ -23,6 +23,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       eslint:
         specifier: ^9.17.0
         version: 9.22.0(jiti@2.4.2)
@@ -35,25 +38,22 @@ importers:
       react-dom:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
-      ui:
-        specifier: workspace:*
-        version: link:../../packages/ui
     devDependencies:
       '@next/eslint-plugin-next':
         specifier: ^15.2.2
         version: 15.2.2
       '@repo/eslint-config':
         specifier: workspace:*
-        version: link:../../packages/eslint-config
+        version: link:../../tooling/eslint
       '@repo/prettier-config':
         specifier: workspace:*
-        version: link:../../packages/prettier-config
+        version: link:../../tooling/prettier
       '@repo/tailwind-config':
         specifier: workspace:*
-        version: link:../../packages/tailwind-config
+        version: link:../../tooling/tailwind
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../packages/typescript-config
+        version: link:../../tooling/typescript
       '@types/node':
         specifier: ^22.13.9
         version: 22.13.9
@@ -78,25 +78,25 @@ importers:
 
   apps/web-extension:
     dependencies:
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       react:
         specifier: ^19.0.0
         version: 19.0.0
       react-dom:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
-      ui:
-        specifier: workspace:*
-        version: link:../../packages/ui
     devDependencies:
       '@repo/prettier-config':
         specifier: workspace:*
-        version: link:../../packages/prettier-config
+        version: link:../../tooling/prettier
       '@repo/tailwind-config':
         specifier: workspace:*
-        version: link:../../packages/tailwind-config
+        version: link:../../tooling/tailwind
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../packages/typescript-config
+        version: link:../../tooling/typescript
       '@types/chrome':
         specifier: ^0.0.280
         version: 0.0.280
@@ -128,7 +128,71 @@ importers:
         specifier: ^0.19.29
         version: 0.19.29(@types/node@22.13.9)(lightningcss@1.29.2)(rollup@4.36.0)(yaml@2.7.0)
 
-  packages/eslint-config:
+  packages/ui:
+    dependencies:
+      '@radix-ui/react-slot':
+        specifier: ^1.1.1
+        version: 1.1.2(@types/react@19.0.10)(react@19.0.0)
+      class-variance-authority:
+        specifier: ^0.7.1
+        version: 0.7.1
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      lucide-react:
+        specifier: ^0.469.0
+        version: 0.469.0(react@19.0.0)
+      tailwind-merge:
+        specifier: ^2.6.0
+        version: 2.6.0
+    devDependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint
+      '@repo/prettier-config':
+        specifier: workspace:*
+        version: link:../../tooling/prettier
+      '@repo/tailwind-config':
+        specifier: workspace:*
+        version: link:../../tooling/tailwind
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
+      '@turbo/gen':
+        specifier: ^2.3.3
+        version: 2.5.1(@types/node@22.13.9)(typescript@5.8.2)
+      '@types/eslint':
+        specifier: ^9.6.1
+        version: 9.6.1
+      '@types/node':
+        specifier: ^22.10.2
+        version: 22.13.9
+      '@types/react':
+        specifier: ^19.0.2
+        version: 19.0.10
+      '@types/react-dom':
+        specifier: ^19.0.2
+        version: 19.0.4(@types/react@19.0.10)
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.20(postcss@8.5.3)
+      eslint:
+        specifier: ^9.17.0
+        version: 9.22.0(jiti@2.4.2)
+      postcss:
+        specifier: ^8.4.49
+        version: 8.5.3
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      tailwindcss:
+        specifier: ^3.4.17
+        version: 3.4.17(ts-node@10.9.2(@types/node@22.13.9)(typescript@5.8.2))
+      typescript:
+        specifier: ^5.7.2
+        version: 5.8.2
+
+  tooling/eslint:
     devDependencies:
       '@eslint/js':
         specifier: ^9.22.0
@@ -164,7 +228,7 @@ importers:
         specifier: ^8.26.0
         version: 8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
 
-  packages/prettier-config:
+  tooling/prettier:
     devDependencies:
       '@ianvs/prettier-plugin-sort-imports':
         specifier: ^4.4.1
@@ -176,11 +240,11 @@ importers:
         specifier: ^0.6.11
         version: 0.6.11(@ianvs/prettier-plugin-sort-imports@4.4.1(prettier@3.5.3))(prettier@3.5.3)
 
-  packages/tailwind-config:
+  tooling/tailwind:
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../typescript-config
+        version: link:../typescript
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.5.3)
@@ -194,71 +258,7 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.13.9)(typescript@5.8.2)))
 
-  packages/typescript-config: {}
-
-  packages/ui:
-    dependencies:
-      '@radix-ui/react-slot':
-        specifier: ^1.1.1
-        version: 1.1.2(@types/react@19.0.10)(react@19.0.0)
-      class-variance-authority:
-        specifier: ^0.7.1
-        version: 0.7.1
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
-      lucide-react:
-        specifier: ^0.469.0
-        version: 0.469.0(react@19.0.0)
-      tailwind-merge:
-        specifier: ^2.6.0
-        version: 2.6.0
-    devDependencies:
-      '@repo/eslint-config':
-        specifier: workspace:*
-        version: link:../eslint-config
-      '@repo/prettier-config':
-        specifier: workspace:*
-        version: link:../prettier-config
-      '@repo/tailwind-config':
-        specifier: workspace:*
-        version: link:../tailwind-config
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
-      '@turbo/gen':
-        specifier: ^2.3.3
-        version: 2.5.1(@types/node@22.13.9)(typescript@5.8.2)
-      '@types/eslint':
-        specifier: ^9.6.1
-        version: 9.6.1
-      '@types/node':
-        specifier: ^22.10.2
-        version: 22.13.9
-      '@types/react':
-        specifier: ^19.0.2
-        version: 19.0.10
-      '@types/react-dom':
-        specifier: ^19.0.2
-        version: 19.0.4(@types/react@19.0.10)
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.20(postcss@8.5.3)
-      eslint:
-        specifier: ^9.17.0
-        version: 9.22.0(jiti@2.4.2)
-      postcss:
-        specifier: ^8.4.49
-        version: 8.5.3
-      react:
-        specifier: ^19.0.0
-        version: 19.0.0
-      tailwindcss:
-        specifier: ^3.4.17
-        version: 3.4.17(ts-node@10.9.2(@types/node@22.13.9)(typescript@5.8.2))
-      typescript:
-        specifier: ^5.7.2
-        version: 5.8.2
+  tooling/typescript: {}
 
 packages:
 
