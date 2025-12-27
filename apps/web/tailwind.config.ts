@@ -3,7 +3,7 @@ import type { Config } from "tailwindcss"
 
 export default {
   content: [
-    ...sharedConfig.content,
+    "./app/**/*.tsx",
     // We need to append the path to the ui to the content array so that
     // those classes are included correctly.
     "../../packages/ui/src/**/*.{ts,tsx}"
