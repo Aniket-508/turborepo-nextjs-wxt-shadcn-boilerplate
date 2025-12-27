@@ -3,11 +3,23 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "clean": "rm -rf .turbo node_modules",
+    "clean": "git clean -xdf .cache .turbo node_modules",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
     "ui-add": "pnpm dlx shadcn@latest add && prettier src --write --list-different"
+  },
+  "exports": {
+    ".": "./src/index.tsx",
+    "./styles.css": "./src/styles.css",
+    "./utils": "./src/utils.ts"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.469.0",
+    "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -26,16 +38,5 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.2"
   },
-  "dependencies": {
-    "@radix-ui/react-slot": "^1.1.1",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.469.0",
-    "tailwind-merge": "^2.6.0"
-  },
-  "exports": {
-    ".": "./src/index.tsx",
-    "./styles.css": "./src/styles.css",
-    "./utils": "./src/utils.ts"
-  }
+  "prettier": "@repo/prettier-config"
 }
