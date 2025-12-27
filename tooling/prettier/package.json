@@ -6,9 +6,20 @@
   "exports": {
     "./base": "./base.js"
   },
-  "devDependencies": {
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11"
-  }
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.13.9",
+    "typescript": "^5.8.2"
+  },    
+  "prettier": "@repo/prettier-config"
 }

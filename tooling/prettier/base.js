@@ -15,13 +15,18 @@ export const baseConfig = {
     "prettier-plugin-tailwindcss",
   ],
   importOrder: [
-    "<BUILTIN_MODULES>", // Node.js built-in modules
+    "<TYPES>",
+    "^(react/(.*)$)|^(react$)",
+    "^(next/(.*)$)|^(next$)",
+    "^(@wxt-dev/(.*)$)|^(@wxt-dev$)",
     "<THIRD_PARTY_MODULES>", // Imports not matched by other special words or groups.
-    "", // Empty line
-    "^@wxt-dev/(.*)$",
     "",
-    "^~(.*)$",
+    "<TYPES>^@repo",
+    "^@repo/(.*)$",
     "",
+    "<TYPES>^[.|..|~]",
+    "^~/",
+    "^[../]",
     "^[./]",
   ],
 };
