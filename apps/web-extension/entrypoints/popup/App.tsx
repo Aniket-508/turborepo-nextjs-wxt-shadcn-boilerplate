@@ -1,5 +1,6 @@
-import { Button } from "@repo/ui"
 import { useState } from "react"
+
+import { Button } from "@repo/ui/button"
 
 import reactLogo from "/react.svg"
 import wxtLogo from "/wxt.svg"

@@ -10,9 +10,9 @@
     "ui-add": "pnpm dlx shadcn@latest add && prettier src --write --list-different"
   },
   "exports": {
-    ".": "./src/index.tsx",
-    "./styles.css": "./src/styles.css",
-    "./utils": "./src/utils.ts"
+    "./*": "./src/components/*.tsx",
+    "./utils/*": "./src/utils/*.ts",
+    "./styles.css": "./styles/globals.css"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",

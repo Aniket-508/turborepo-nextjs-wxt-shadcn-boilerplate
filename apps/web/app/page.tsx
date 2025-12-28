@@ -1,6 +1,7 @@
-import { Card, CardDescription, CardHeader, CardTitle } from "@repo/ui"
 import Image from "next/image"
 import Link from "next/link"
+
+import { Card, CardDescription, CardHeader, CardTitle } from "@repo/ui/card"
 
 function Gradient({
   conic,
