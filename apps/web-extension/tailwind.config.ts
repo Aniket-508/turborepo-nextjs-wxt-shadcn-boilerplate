@@ -1,13 +1,12 @@
 import sharedConfig from "@repo/tailwind-config"
 import type { Config } from "tailwindcss"
 
-const config: Pick<Config, "darkMode" | "content" | "presets"> = {
-  darkMode: ["class"],
+export default {
   content: [
     "./entrypoints/**/*.{html,ts,tsx}",
-    "./components/**/*.{html,ts,tsx}"
+    // We need to append the path to the ui to the content array so that
+    // those classes are included correctly.
+    "../../packages/ui/src/**/*.{ts,tsx}"
   ],
   presets: [sharedConfig]
-}
-
-export default config
+} satisfies Config

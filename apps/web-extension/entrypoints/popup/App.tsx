@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@repo/ui"
 import { useState } from "react"
 
 import reactLogo from "/react.svg"
