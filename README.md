@@ -1,19 +1,14 @@
 # Turborepo Boilerplate
+
 This project is a boilerplate for building applications that require both web-app and browser-extension. It is initialized with:
 
-* [Next.js](https://nextjs.org/) (web framework)
-* [WXT](https://wxt.dev/) (browser extension framework)
-* [TailwindCSS](https://tailwindcss.com/)
-* [shadcn](https://ui.shadcn.com/) (component design system)
-* [TypeScript](https://www.typescriptlang.org/)
-* [ESLint](https://eslint.org/)
-* [Prettier](https://prettier.io/)
-
-## Adding new components
-New components can be added to the respective app via the shadcn cli like so:
-```
-pnpm dlx shadcn@latest add tooltip 
-```
+- [Next.js](https://nextjs.org/) (web framework)
+- [WXT](https://wxt.dev/) (browser extension framework)
+- [TailwindCSS](https://tailwindcss.com/)
+- [shadcn](https://ui.shadcn.com/) (component design system)
+- [TypeScript](https://www.typescriptlang.org/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
 
 ## Getting Started
 
