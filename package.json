@@ -7,14 +7,14 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "check-types": "turbo run check-types",
+    "typecheck": "turbo run typecheck",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
     "@repo/prettier-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "prettier": "^3.5.3",
-    "turbo": "^2.4.4"
+    "prettier": "^3.8.1",
+    "turbo": "^2.8.14"
   },
   "packageManager": "pnpm@9.15.1",
   "engines": {
